@@ -1,0 +1,57 @@
+._sectionblock .editor-block-list__block {
+    color: inherit;
+
+}
+._sectionblock>.editor-inner-blocks>.editor-block-list__layout{
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+
+    }
+    .editor-block-list__block[data-type='balise/section-block-col'] {
+        max-width: none;
+        margin-left: 30px;
+        margin-right: 30px;
+        >.editor-block-list__block-edit {
+            &:before {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    >*{
+
+        flex-basis: 100%;
+        >.editor-block-list__block-edit {
+            flex-grow: 1;
+
+            flex-basis: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            position: static;
+        }
+    }
+
+    ._background {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        right: -30px;
+        bottom: 0;
+        z-index: -100;
+        content: '';
+        display: block;
+        z-index: -1;
+        background-size: cover;
+        background-position: 50%; 
+    }
+}
+.wp-block {
+    max-width: none;
+}
+._sectionblock-slide {
+    .editor-block-list__block {
+        color: inherit;
+    }
+}

@@ -1,0 +1,99 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+html {
+    font-family: 'Raleway', sans-serif;
+    @include fluid-type(320px, 1920px, 18px, 20px);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Cabin Sketch', cursive;
+}
+body {
+    font-weight: 500;
+    line-height: 1.45;
+    color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+    margin: 1.414em 0 0.5em;
+    line-height: 1.2;
+}
+h1 {
+    margin-top: 0;
+    transform: rotate(-3deg);
+
+    font-family: 'Leckerli One', cursive;
+    @include fluid-type(320px, 1920px, 1.602*18px, 5*20px);
+    text-align: center;
+
+    text-shadow:  1px 1px 0 $vert, 2px 2px 0 $vert, 3px 3px 0 $vert, 4px 4px 0 $vert;
+}
+.home h2 {
+
+
+    margin-top: 0;
+    transform: rotate(-3deg);
+    font-family: 'Leckerli One', cursive;
+    @include fluid-type(320px, 1920px, 1.602*18px, 4*20px);
+    text-align: center;
+
+    text-shadow:  1px 1px 0 $vert, 2px 2px 0 $vert, 3px 3px 0 $vert, 4px 4px 0 $vert;
+
+}
+.titre-fond-vert {
+    text-shadow:  1px 1px 0 #FFF, 2px 2px 0 #FFF, 3px 3px 0 #FFF, 4px 4px 0 #FFF !important;
+}
+
+h2 {
+    @include fluid-type(320px, 1920px, 1.424*18px, 2.369*20px);
+}
+
+h3 {
+    @include fluid-type(320px, 1920px, 1.266*18px, 1.777*20px);
+}
+
+h4 {
+    @include fluid-type(320px, 1920px, 1.125*18px, 1.333*20px);
+}
+
+small, .font_small {
+    @include fluid-type(320px, 1920px, 0.9*18px, 0.75*20px);
+}
+.home-products {
+    >*:first-child {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+    }
+    .kaapeh-menu {
+        display: flex;
+        align-items: center;
+    }
+}
+._sectionblock.has-2-columns>* { 
+    width: auto;
+    flex-basis: 50%;
+    box-sizing: border-box;
+}

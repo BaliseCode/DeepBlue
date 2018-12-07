@@ -1,0 +1,12 @@
+$vert: #6dc4a2;
+
+@import "helpers/normalize.scss";
+@import "helpers/grid.scss";
+@import "helpers/containers.scss";
+@import "helpers/typography.scss";
+
+@import "molecules/contactCard.scss";
+@import "molecules/nav.scss"; 
+
+@import "sections/footer.scss";
+@import "pages/woocommerce.scss";

@@ -1,0 +1,22 @@
+.kaapeh-menu {
+    background-image: url(../images/menu/brique.jpg);
+    padding: 10% 5%;
+    .blackboard {
+        max-width: 50em;
+        padding: 5% 5%;
+        margin: 0 auto;
+        background-image: url(../images/menu/chalk.jpg);
+        color: #FFF;
+        strong {
+            display: inline-block;
+            margin-top: 0.5em;
+            line-height: 1.5;
+        }
+        
+    }
+    pre {
+        color: #FFF;
+        white-space: pre-wrap;
+        font-family: 'Raleway', sans-serif;
+    }
+}

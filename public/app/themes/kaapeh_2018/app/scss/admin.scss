@@ -1,0 +1,10 @@
+$vert: #6dc4a2;
+.editor-block-list__layout {
+    background-color: $vert;
+    padding: 5%;
+    background-image: url(../images/produits/boisvert.jpg);
+    .editor-block-list__layout {
+        padding:auto;
+        background: transparent;
+    }
+}

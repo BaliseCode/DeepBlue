@@ -1,0 +1,28 @@
+.kaapeh-evenements {
+    background-image: url(../images/evenements/bois.jpg);
+    padding: 10% 5% 5%;
+    .inside {
+        max-width: 70em;
+        margin: 0 auto;
+        .wp-block-media-text {
+            &.has-media-on-the-right {
+                grid-template-columns: 1fr 2fr;
+            }
+            &.has-media-on-the-left {
+                grid-template-columns: 2fr 1fr;
+            }
+            @media (max-width: 768px) {
+                display: block;
+            }
+            >figure {
+                margin: 1rem;
+                    box-shadow: 0 0 10px rgba(#000,0.5);
+            }
+            >div {
+                padding: 1rem;
+                box-shadow: 0 0 10px rgba(#000,0.5);
+                background-color: #FFF;
+            }
+        }
+    }
+}

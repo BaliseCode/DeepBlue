@@ -1,0 +1,65 @@
+@mixin generate-grid($prefix, $grid-columns) {
+
+    @for $i from 1 through $grid-columns {
+        .col-#{$prefix}-#{$i} {
+            width: 100%*$i/$grid-columns;
+        }
+    }
+}
+[class^="col"], [class*=" col"] {
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    >* {
+        box-sizing: border-box;
+    }
+    &.center {
+        justify-content: space-evenly;
+    }
+    &.left {
+        justify-content: flex-start;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+    &.bottom {
+        align-items: bottom;
+    }
+    &.middle {
+        align-items: center;
+    }
+    &.gap-small {
+        margin: -0.5rem;
+        >* {
+            padding: 0.5rem;
+        }
+    }
+    &.gap {
+        margin: -1rem;
+        >* {
+            padding: 1rem;
+        }
+    }
+    &.gap-large {
+        margin: -2rem;
+        >* {
+
+            padding: 2rem;
+        }
+    }
+}
+@include generate-grid("xs",12);
+@media (min-width: 400px) {
+    @include generate-grid("sm",12);
+}
+@media (min-width: 624px) {
+    @include generate-grid("md",12);
+}
+@media (min-width: 896px) {
+    @include generate-grid("lg",12);
+}
+@media (min-width: 1280px) {
+    @include generate-grid("xl",12);
+}

@@ -1,0 +1,16 @@
+{
+    "name": "balise/anchor",
+    "description": "A Wordpress Boilerplate",
+    "type": "project",
+    "require": {
+        "balise/anchor-framework": "dev-master",
+        "balise/firstmate": "dev-master"
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "license": "MIT",
+    "homepage": "https://balise.ca"
+}

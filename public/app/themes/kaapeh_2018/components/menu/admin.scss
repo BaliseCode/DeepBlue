@@ -1,0 +1,21 @@
+.kaapeh-menu {
+    background-image: url(../images/menu/brique.jpg);
+    padding: 10% 5%;
+    .blackboard {
+        max-width: 70em;
+        padding: 5% 5%;
+        background-image: url(../images/menu/chalk.jpg);
+        color: #FFF;
+        strong {
+            margin-top: 0.3em;
+        }
+    }
+
+    .wp-block-columns {
+        display: block;
+    }
+    .wp-block-verse pre {
+        color: #FFF;
+        white-space: pre-wrap;
+    }
+}

@@ -1,0 +1,9 @@
+._sectionblock {
+    display: flex;
+    &>* {
+        flex-basis: 100%;
+        background-size: cover;
+        background-position: 50%;
+        box-sizing: border-box;
+    }
+}

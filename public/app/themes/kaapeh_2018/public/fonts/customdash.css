@@ -1,0 +1,11 @@
+
+@font-face {
+    font-family: 'customdash';
+    src:  url('../fonts/customdash.eot?1543179747');
+    src:  url('../fonts/customdash.eot?%random%#iefix') format('embedded-opentype'),
+    url('../fonts/customdash.ttf?%random%') format('truetype'),
+    url('../fonts/customdash.woff?%random%') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.dashicons-noun_slipper_2017982_000000:before{ font-family: 'customdash' !important; content:'\ea01'}

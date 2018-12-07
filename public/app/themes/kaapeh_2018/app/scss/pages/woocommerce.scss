@@ -1,0 +1,28 @@
+.woocommerce-page {
+    main {
+        padding: 10% 5%;
+
+        background-color: $vert;
+        background-image: url(../images/produits/boisvert.jpg);
+        font-weight: 500;
+    h1 {
+        text-shadow:  1px 1px 0 #FFF, 2px 2px 0 #FFF, 3px 3px 0 #FFF, 4px 4px 0 #FFF;
+    }
+    }
+    .container.narrow {
+        max-width: 36em;
+        border-radius: 50%;
+        p {
+            box-shadow: 0 0 60px 30px rgba($vert,0.6);
+            background-color: rgba($vert,0.6);
+            text-shadow: 0 0 5px $vert;
+        }
+    }
+
+    .cat-header {
+        h2 {
+            text-align: center;
+            text-shadow:  1px 1px 0 #FFF, 2px 2px 0 #FFF, 3px 3px 0 #FFF, 4px 4px 0 #FFF;
+        }
+    }
+}

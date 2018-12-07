@@ -1,0 +1,24 @@
+<?php $__env->startSection('body'); ?>
+    <div class="container narrow">
+        <h1><?php echo $title; ?></h1>
+        <?php echo $content; ?>
+
+
+    </div>
+    <div class="container">
+        <?php $categories = get_terms( 'product_cat');
+        foreach($categories as $category) {
+            echo '<div class="container narrow cat-header">';
+            echo '<h2>'.$category->name.'</h2>';
+            if ($category->description) {
+                echo '<p>'.$category->description.'</p>';
+            }
+            echo '</div>';
+        }
+        print_r($categories);
+
+        ?>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('pages/main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

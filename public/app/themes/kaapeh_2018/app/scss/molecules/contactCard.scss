@@ -1,0 +1,30 @@
+.contactCard {
+    padding: 1.5rem 1rem;
+    box-shadow: 0 0 10px rgba(#000,0.5);
+    background-color: #FFF;
+    transform: rotate(-5deg);
+
+    text-align: center;
+    strong {
+
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+        margin-top: 30px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -9px;
+            width: 70px;
+            margin-left: -35px;
+            left: 50%;
+            height: 2px;
+            background-color: $vert;
+        }
+    }
+    &.alt {
+        transform: rotate(5deg);
+    }
+}

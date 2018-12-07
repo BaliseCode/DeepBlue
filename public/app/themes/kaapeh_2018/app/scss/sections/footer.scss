@@ -1,0 +1,115 @@
+footer {
+    @media (min-width: 624px) {
+        height: 600px;
+    }
+
+    background-image: url(../images/footer/footer-fond.jpg);
+    background-position: 50%;
+    position: relative;
+box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1000;
+        @media (min-width: 624px) {
+            height: 600px;
+        }
+        .row {
+            margin-top: 0;
+            margin-bottom: 0;
+            >* {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            @media (min-width: 624px) {
+                height: 600px;
+            }
+            @media (min-width: 1024px) {
+                padding-right: 33%;
+            }
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-image: url(../images/footer/footer-block.jpg);
+    }
+    .tasse {
+        position: absolute;
+        top: 150px;
+        left: 66%;
+
+        display: none;
+        width: 337px;
+        height: 338px;
+        background: url(../images/footer/tasse.png);
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+    .carteStack {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+
+        .carte:nth-child(1) {
+            transform: rotate(30deg);
+        }
+        .carte:nth-child(2) {
+            transform: rotate(-30deg) translate(20px,0);
+        }
+        .carte:nth-child(3) {
+            transform: rotate(10deg) translate(-20px,0);
+        }
+        .carte:nth-child(4) {
+            transform: rotate(-96deg) translate(45px,0);
+        }
+        .carte:nth-child(5) {
+            transform: rotate(-96deg) translate(0, 445px);
+        }
+        .carte:nth-child(6) {
+            transform: translate(250px,0) rotate(45deg) ;
+        }
+    }
+    .carte {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        margin-top: -75px;
+        margin-left: -150px;
+        display: block;
+        width: 300px;
+        height: 150px;
+        background: url(../images/footer/carte.png);
+        box-shadow: 0 0 10px rgba(#000,0.5);
+        background-size: cover;
+    }
+
+    .footer-icons {
+        font-size: 36px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 20px;
+        }
+        i.icon-facebook {
+            color: #3b5999;
+        }
+        i.icon-instagram {
+            color: #e4405f;
+        }
+        i.icon-mail {
+            color: #3aaf85;
+        }
+    }
+}

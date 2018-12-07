@@ -1,0 +1,113 @@
+nav {
+    >a {
+        position: relative;
+        z-index: 1000;
+    }
+    img {
+        height: 48px !important;
+        margin: 5px;
+    }
+    height: 58px;
+    background-color: $vert;
+    position: fixed;
+    left: 0;
+    top:0;
+    right: 0;
+    z-index: 2000;
+    line-height: 48px;
+    box-shadow:0 0 20px rgba(#000,0.5);
+    font-family: 'Cabin Sketch', cursive;
+
+    font-size: 24px;
+    #toggleExtra {
+        display: none;
+    }
+    .toggle {
+        position: absolute;
+        right: 5px;
+        bottom: 11px;
+        background: #2F0B4F;
+        width: 36px;
+        height: 36px;
+        margin-left: 20px;
+        float: right;
+        border-radius: 50%;
+        display: none;
+        text-align: center;
+        cursor: pointer;
+        .navlines {
+            position: absolute;
+            border-radius: 50%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: #FFF;
+            box-shadow: 7px 0 0 #FFF, -7px 0 0 #FFF;
+        }
+    }
+    >ul.menu {
+        list-style: none;
+        margin: 0;
+        padding: 5px;
+
+            padding-left: 200px;
+        text-align: right;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-end;
+        &.overmenu {
+            padding-right: 46px;
+            .toggle {
+                display: block;
+            }
+        }
+        >li {
+            display: inline-block;
+            a {
+                display: block;
+                padding: 0 20px;
+                text-decoration: none;
+                color: #FFF;
+            }
+
+        }
+    }
+    ul.extra {
+        position: absolute;
+        top: 58px;
+        list-style: none;
+        right: 0;
+        background-color: #FFF;
+        margin: 0;
+        padding: 0;
+        box-shadow:0 0 20px rgba(#000,0.5);
+        display: none;
+        li {
+            text-align: center;
+            line-height: 48px;
+            a {
+                white-space: nowrap;
+                display: block;
+                padding: 0 20px;
+                text-decoration: none;
+                color: $vert;
+            }
+        }
+    }
+    #toggleExtra:checked + ul.extra {
+        display: block;
+    }
+}
+body {
+    position: relative;
+    main {
+        padding-top: 58px;
+    }
+}

@@ -1,0 +1,24 @@
+
+@font-face {
+    font-family: 'iconfont';
+    src:  url('../fonts/iconfont.eot?1544192479');
+    src:  url('../fonts/iconfont.eot?%random%#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.ttf?%random%') format('truetype'),
+    url('../fonts/iconfont.woff?%random%') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+i[class^="icon-"], i[class*=" icon-"] {
+    font-family: 'iconfont' !important;
+    speak: none;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    font-variant: normal; 
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+i.icon-facebook:before{content:'\ea01'}i.icon-instagram:before{content:'\ea02'}i.icon-mail:before{content:'\ea03'}
